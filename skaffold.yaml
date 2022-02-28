@@ -5,12 +5,12 @@ deploy:
     manifests:
       - ./infra/k8s/*
 build:
-  # local:
-  #   push: false
-  googleCloudBuild:
-    projectId: restaurant-dev-342612
+  local:
+    push: false
+  # googleCloudBuild:
+  #   projectId: restaurant-dev-342612
   artifacts:
-    - image: us.gcr.io/restaurant-dev-342612/auth
+    - image: ribbery009/auth
       context: auth
       docker:
         dockerfile: Dockerfile
